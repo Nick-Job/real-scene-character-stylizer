@@ -44,6 +44,26 @@ Show a recommended combination first and briefly explain why it fits the image. 
 - Preserve faces, text, logos, and important architecture unless the user asks to transform them.
 - When generating or editing the image, use the available image-editing tool and include the source photograph as the reference.
 
+## Separate reference roles before generation
+
+Label every supplied image before writing the generation prompt:
+
+- **Edit target:** the real photograph whose environment and geometry must be preserved.
+- **Style reference:** used only to infer color hierarchy, shape language, line quality, texture, and overall energy.
+- **Identity reference:** used only when the user explicitly asks for a depicted person to be represented.
+
+Never treat a style reference as an insert layer. Do not cut out, trace, closely reconstruct, or reuse its character silhouette, pose, clothing blocks, accessories, props, or composition. First design a new character from the edit target's setting, usable anchors, action, and requested presentation; only then map the selected reference's abstract palette relationships and finish onto that new design.
+
+For each image, define these items before generation:
+
+1. the real architectural or environmental anchor;
+2. the new action and line of movement;
+3. the intended front/behind occlusion;
+4. a new silhouette and outfit unrelated to the reference character;
+5. the color hierarchy expressed as dominant, secondary, accent, and breathing-space colors.
+
+When several photographs are processed together, design each character independently. Do not recycle one pose, outfit construction, or fixed palette across the set unless the user explicitly asks for a coordinated series.
+
 Read [references/style-system.md](references/style-system.md) for the shared visual grammar and character construction rules. Read [references/scene-options.md](references/scene-options.md) when building the user-facing choice menu or resolving composition.
 
 ## Quality check
@@ -55,5 +75,6 @@ Before delivering, verify:
 - feet, hands, props, and occlusions agree with the scene geometry;
 - clothing fits the weather and action unless intentional contrast was chosen;
 - the illustration is neither a floating sticker nor a near-photorealistic person;
+- the character has been newly designed rather than extracted or reconstructed from a style reference;
 - decorative elements do not cover essential photographic information;
 - no extra limbs, malformed hands, accidental text, or unexplained objects were introduced.
