@@ -1,0 +1,6 @@
+interface:
+  display_name: "实景手绘角色风格化"
+  short_description: "分析真实照片，并提供适配场景的手绘角色、穿搭与构图方案"
+  default_prompt: "使用 $real-scene-character-stylizer 分析这张照片，并给我适合场景的角色与穿搭选项。"
+policy:
+  allow_implicit_invocation: true
