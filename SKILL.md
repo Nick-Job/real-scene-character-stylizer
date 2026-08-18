@@ -66,6 +66,8 @@ When several photographs are processed together, design each character independe
 
 Read [references/style-system.md](references/style-system.md) for the shared visual grammar and character construction rules. Read [references/scene-options.md](references/scene-options.md) when building the user-facing choice menu or resolving composition.
 
+When calibrating a multi-photo run or evaluating environmental contact and occlusion, start with the [reference case index](examples/README.md). Its edit-target/result pairs document transferable decisions, successful interactions, and limitations. Use them as reasoning references only; never copy their characters as fixed templates.
+
 ## Quality check
 
 Before delivering, verify:
